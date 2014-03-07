@@ -28,7 +28,7 @@ end
 
 def player_question
   puts "Player[?]: What does #{@num1} plus #{@num2} equal?"
-  @player_answer = gets.chomp.downcase
+  @player_answer = gets.chomp.downcase.to_i
 
   # Need to assign a variable to Player[?]
 end
