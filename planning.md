@@ -8,6 +8,9 @@
 ### Equation Generator
   * Random + Random = evalaute answer
 
+### Equation Validator
+  * Takes instance variables from "Equation Generator" and validates it against user input.  
+
 ### Player Turn Order
   * P1 to P2
 
