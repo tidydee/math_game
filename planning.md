@@ -12,6 +12,7 @@
   * Takes instance variables from "Equation Generator" and validates it against user input.  
 
 ### Player Turn Order
+  * Capture P1 & P2 Name var
   * P1 to P2
 
 ### Player Question
