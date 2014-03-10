@@ -4,6 +4,9 @@ require 'colorize'
 @player1_lives = 3
 @player2_lives = 3
 
+@player1_score = 0
+@player2_score = 0
+
 @current_player = 1
 
 def game_start
@@ -35,10 +38,10 @@ end
 def subtract_life
   if @current_player == 1
     @player1_lives -= 1
-    puts "Incorrect answer, you now have #{@player1_lives} lives left.".red
+    puts "Incorrect answer #{@name_1}, you now have #{@player1_lives} lives left.".red
   else
     @player2_lives -= 1
-    puts "Incorrect answer, you now have #{@player2_lives} lives left.".red
+    puts "Incorrect answer #{@name_2}, you now have #{@player2_lives} lives left.".red
   end
 end
 
@@ -72,16 +75,16 @@ def math_operator_generator
 end
 
 def equation_validator
-        # if eval.("#{@num1} #{@random_operator} #{@num2}") == @player_answer
-        #   puts "Correct!".green
-  if @num1 + @num2 == @player_answer
-    puts "Correct!".green
-  elsif @num1 - @num2 == @player_answer
-    puts "Correct!".green
-  elsif @num1 * @num2 == @player_answer
-    puts "Correct!".green
-  elsif @num1 / @num2 == @player_answer
-    puts "Correct!".green    
+  if eval("#{@num1} #{@random_operator} #{@num2}") == @player_answer
+   puts "Correct!".green
+  # if @num1 + @num2 == @player_answer
+  #   puts "Correct!".green
+  # elsif @num1 - @num2 == @player_answer
+  #   puts "Correct!".green
+  # elsif @num1 * @num2 == @player_answer
+  #   puts "Correct!".green
+  # elsif @num1 / @num2 == @player_answer
+  #   puts "Correct!".green    
   else
     subtract_life
   end
