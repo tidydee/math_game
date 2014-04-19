@@ -3,47 +3,51 @@ math_game
 
 Two players enter into the ultimate battle between random number multiplication.
 
-### Math Game Planning
-Methods:
+# Math Game Planning
 
-#### Game Start
+## Methods:
+### Game Start
+  * P1 Name
+  * P2 Name
 
-* P1 Name
-* P2 Name
-* Equation Generator
+### Equation Generator
+  * Random + Random = evalaute answer
 
-* Random + Random = evalaute answer
-* Equation Validator
+### Equation Validator
+  * Takes instance variables from "Equation Generator" and validates it against user input.  
 
-* Takes instance variables from "Equation Generator" and validates it against user input.
-* Player Turn Order
+### Player Turn Order
+  * Capture P1 & P2 Name var
+  * P1 to P2
 
-* Capture P1 & P2 Name var
-* P1 to P2
-* Player Question
+### Player Question
+  * Equation vs. PLayer Answer
+    ** Use string Interprelation " #{} "
 
-* Equation vs. PLayer Answer ** Use string Interprelation " #{} "
-* Right/Wrong
+### Right/Wrong
+  * If true -> Equation Generator
+  * If false -> PLayer Minus Life
 
-* If true -> Equation Generator
-*If false -> PLayer Minus Life
-* Player Minus Life
+### Player Minus Life
+  * Player Life -1
 
-* Player Life -1
-* Player Profiles
+### Player Profiles
+  * P1 = 3 (On Start)
+  * P2 = 3 (On Start)
 
-* P1 = 3 (On Start)
-* P2 = 3 (On Start)
-* Display Player Score
+### Display Player Score
+  * P1 Lives
+  * P2 Lives
 
-* P1 Lives
-* P2 Lives
-*Life Evaluator
+### Life Evaluator
+  * If P1 Life > 0 -> Equation Generator
+  * If P2 Life = 0 -> Game Over
 
-* If P1 Life > 0 -> Equation Generator
-* If P2 Life = 0 -> Game Over
-* Game Over
-
-* P1 Life vs. P2 Life
-*If P1 > P2 Life -> P1 wins else P2 wins end
-* ------------------>>>> Game Start
+### Game Over
+  * P1 Life vs. P2 Life
+    * If P1 > P2 Life
+        -> P1 wins 
+      else
+        P2 wins
+      end
+  * ------------------>>>> Game Start    
